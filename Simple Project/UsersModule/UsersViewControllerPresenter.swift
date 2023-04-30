@@ -16,6 +16,7 @@ class UsersViewControllerPresenter:UsersViewControllerPresenting{
     
     func viewDidLoad() {
         debugPrint("Loaded UsersViewControllerPresenter")
+        self.view?.setupUI()
         self.fetchUsers()
     }
     func fetchUsers() {

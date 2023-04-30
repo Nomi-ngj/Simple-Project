@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UsersViewController" customModule="Simple_Project" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="HYW-OU-62N" id="UdT-Oj-hBf"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,18 +19,18 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UsersViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Jp-0N-gFS">
-                    <rect key="frame" x="119.00000000000001" y="415.66666666666669" width="155.33333333333337" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="HYW-OU-62N">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="4Jp-0N-gFS" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Dfh-ww-z0p"/>
-                <constraint firstItem="4Jp-0N-gFS" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="vGP-jQ-KB9"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="HYW-OU-62N" secondAttribute="trailing" id="195-Lv-why"/>
+                <constraint firstItem="HYW-OU-62N" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Ngs-wA-g6i"/>
+                <constraint firstItem="HYW-OU-62N" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="SrX-Ba-L5b"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="HYW-OU-62N" secondAttribute="bottom" id="nWu-Rw-s2p"/>
             </constraints>
             <point key="canvasLocation" x="-76" y="20"/>
         </view>

@@ -25,6 +25,8 @@
 		8CB7D3EB29FEE2630015FCA3 /* SpiderWebService in Frameworks */ = {isa = PBXBuildFile; productRef = 8CB7D3EA29FEE2630015FCA3 /* SpiderWebService */; };
 		8CB7D3EE29FEE2A00015FCA3 /* NetworkConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7D3ED29FEE2A00015FCA3 /* NetworkConstant.swift */; };
 		8CB7D3F029FEE2AF0015FCA3 /* UsersRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7D3EF29FEE2AF0015FCA3 /* UsersRequest.swift */; };
+		8CB7D3F429FEEB970015FCA3 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7D3F229FEEB970015FCA3 /* UserTableViewCell.swift */; };
+		8CB7D3F529FEEB970015FCA3 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CB7D3F329FEEB970015FCA3 /* UserTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,8 @@
 		8CB7D3E729FEE13B0015FCA3 /* UserViewControllerEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewControllerEntity.swift; sourceTree = "<group>"; };
 		8CB7D3ED29FEE2A00015FCA3 /* NetworkConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstant.swift; sourceTree = "<group>"; };
 		8CB7D3EF29FEE2AF0015FCA3 /* UsersRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersRequest.swift; sourceTree = "<group>"; };
+		8CB7D3F229FEEB970015FCA3 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		8CB7D3F329FEEB970015FCA3 /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +153,7 @@
 		8CB7D3DA29FED7F30015FCA3 /* UsersModule */ = {
 			isa = PBXGroup;
 			children = (
+				8CB7D3F129FEEB640015FCA3 /* CELL */,
 				8CB7D3DB29FED8110015FCA3 /* UsersViewController.swift */,
 				8CB7D3DC29FED8110015FCA3 /* UsersViewController.xib */,
 				8CB7D3DF29FEDA610015FCA3 /* UsersViewControllerContracts.swift */,
@@ -167,6 +172,15 @@
 				8CB7D3EF29FEE2AF0015FCA3 /* UsersRequest.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		8CB7D3F129FEEB640015FCA3 /* CELL */ = {
+			isa = PBXGroup;
+			children = (
+				8CB7D3F229FEEB970015FCA3 /* UserTableViewCell.swift */,
+				8CB7D3F329FEEB970015FCA3 /* UserTableViewCell.xib */,
+			);
+			path = CELL;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,6 +297,7 @@
 				8CB7D3DE29FED8110015FCA3 /* UsersViewController.xib in Resources */,
 				8CB7D3B329FE66DB0015FCA3 /* Assets.xcassets in Resources */,
 				8CB7D3B129FE66DA0015FCA3 /* Main.storyboard in Resources */,
+				8CB7D3F529FEEB970015FCA3 /* UserTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +324,7 @@
 			files = (
 				8CB7D3DD29FED8110015FCA3 /* UsersViewController.swift in Sources */,
 				8CB7D3AA29FE66DA0015FCA3 /* AppDelegate.swift in Sources */,
+				8CB7D3F429FEEB970015FCA3 /* UserTableViewCell.swift in Sources */,
 				8CB7D3AC29FE66DA0015FCA3 /* SceneDelegate.swift in Sources */,
 				8CB7D3E629FEDAD00015FCA3 /* UsersViewControllerInteractor.swift in Sources */,
 				8CB7D3E829FEE13B0015FCA3 /* UserViewControllerEntity.swift in Sources */,

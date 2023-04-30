@@ -10,6 +10,7 @@ import UIKit
 
 protocol UsersViewControllerDisplaying: AnyObject{
     var presenter: UsersViewControllerPresenting! {get set}
+    var tableView: UITableView! {get}
     func setupUI()
     func reloadData()
 }

@@ -13,15 +13,12 @@ class UserTableViewCell: UITableViewCell {
     @IBOutlet weak var lblFullName:UILabel!
     @IBOutlet weak var lblEmail:UILabel!
     @IBOutlet weak var lblPhone:UILabel!
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+
+    func config(viewModel:UserViewControllerEntity){
+        lblUserName.text = viewModel.username
+        lblFullName.text = viewModel.name
+        lblEmail.text = viewModel.email
+        lblPhone.text = viewModel.phone
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
 }

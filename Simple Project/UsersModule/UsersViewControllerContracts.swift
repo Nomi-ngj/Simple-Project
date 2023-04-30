@@ -20,6 +20,7 @@ protocol UsersViewControllerPresenting:AnyObject{
     var router:UsersViewControllerRouting? {get}
     var interactor: UsersViewControllerInteracting? {get set}
     var users:[UserViewControllerEntity]? {get}
+    var title:String {get}
     func viewDidLoad()
     func fetchUsers()
 }

@@ -13,12 +13,13 @@ class UsersViewControllerPresenter:UsersViewControllerPresenting{
     var router: UsersViewControllerRouting?
     var interactor: UsersViewControllerInteracting?
     var users: [UserViewControllerEntity]?
-    
+    var title: String = "Users"
     func viewDidLoad() {
         debugPrint("Loaded UsersViewControllerPresenter")
         self.view?.setupUI()
         self.fetchUsers()
     }
+    
     func fetchUsers() {
         guard let interactor else {return}
         Task{

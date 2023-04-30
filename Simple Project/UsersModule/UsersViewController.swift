@@ -27,26 +27,31 @@ class UsersViewController: UIViewController, UsersViewControllerDisplaying {
     }
     
     func setupUI() {
-        debugPrint("setupUI")
+        title = presenter.title
         self.setupTableView()
     }
     
     private func setupTableView(){
-//        "UserTableViewCell"
         self.tableView.register(UINib(nibName: "UserTableViewCell", bundle: nibBundle), forCellReuseIdentifier: "UserTableViewCell")
     }
+    
     func reloadData() {
-        debugPrint("reloadData")
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
 }
 
 extension UsersViewController:UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return presenter.users?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UserTableViewCell") as! UserTableViewCell
+        if let user = presenter.users?[indexPath.row]{
+            cell.config(viewModel: user)
+        }
         cell.selectionStyle = .none
         return cell
     }

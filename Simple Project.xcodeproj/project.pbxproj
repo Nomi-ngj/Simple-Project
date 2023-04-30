@@ -29,6 +29,9 @@
 		8CB7D3F529FEEB970015FCA3 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CB7D3F329FEEB970015FCA3 /* UserTableViewCell.xib */; };
 		8CB7D3F829FEF25B0015FCA3 /* UserCompleteDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7D3F629FEF25B0015FCA3 /* UserCompleteDetailsViewController.swift */; };
 		8CB7D3F929FEF25B0015FCA3 /* UserCompleteDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CB7D3F729FEF25B0015FCA3 /* UserCompleteDetailsViewController.xib */; };
+		8CB7D3FC29FEF4F60015FCA3 /* UserCompleteDetailsViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7D3FB29FEF4F60015FCA3 /* UserCompleteDetailsViewControllerPresenter.swift */; };
+		8CB7D3FE29FEF5360015FCA3 /* UserCompleteDetailsViewControllerConstacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7D3FD29FEF5360015FCA3 /* UserCompleteDetailsViewControllerConstacts.swift */; };
+		8CB7D40029FEF5B90015FCA3 /* UserCompleteDetailsViewControllerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7D3FF29FEF5B90015FCA3 /* UserCompleteDetailsViewControllerRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +77,9 @@
 		8CB7D3F329FEEB970015FCA3 /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
 		8CB7D3F629FEF25B0015FCA3 /* UserCompleteDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCompleteDetailsViewController.swift; sourceTree = "<group>"; };
 		8CB7D3F729FEF25B0015FCA3 /* UserCompleteDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCompleteDetailsViewController.xib; sourceTree = "<group>"; };
+		8CB7D3FB29FEF4F60015FCA3 /* UserCompleteDetailsViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCompleteDetailsViewControllerPresenter.swift; sourceTree = "<group>"; };
+		8CB7D3FD29FEF5360015FCA3 /* UserCompleteDetailsViewControllerConstacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCompleteDetailsViewControllerConstacts.swift; sourceTree = "<group>"; };
+		8CB7D3FF29FEF5B90015FCA3 /* UserCompleteDetailsViewControllerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCompleteDetailsViewControllerRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +199,9 @@
 			children = (
 				8CB7D3F629FEF25B0015FCA3 /* UserCompleteDetailsViewController.swift */,
 				8CB7D3F729FEF25B0015FCA3 /* UserCompleteDetailsViewController.xib */,
+				8CB7D3FB29FEF4F60015FCA3 /* UserCompleteDetailsViewControllerPresenter.swift */,
+				8CB7D3FD29FEF5360015FCA3 /* UserCompleteDetailsViewControllerConstacts.swift */,
+				8CB7D3FF29FEF5B90015FCA3 /* UserCompleteDetailsViewControllerRouter.swift */,
 			);
 			path = UserCompleteDetailsViewController;
 			sourceTree = "<group>";
@@ -343,10 +352,13 @@
 				8CB7D3AC29FE66DA0015FCA3 /* SceneDelegate.swift in Sources */,
 				8CB7D3E629FEDAD00015FCA3 /* UsersViewControllerInteractor.swift in Sources */,
 				8CB7D3E829FEE13B0015FCA3 /* UserViewControllerEntity.swift in Sources */,
+				8CB7D3FE29FEF5360015FCA3 /* UserCompleteDetailsViewControllerConstacts.swift in Sources */,
 				8CB7D3E029FEDA610015FCA3 /* UsersViewControllerContracts.swift in Sources */,
 				8CB7D3E429FEDAC70015FCA3 /* UsersViewControllerRouter.swift in Sources */,
 				8CB7D3EE29FEE2A00015FCA3 /* NetworkConstant.swift in Sources */,
 				8CB7D3F029FEE2AF0015FCA3 /* UsersRequest.swift in Sources */,
+				8CB7D3FC29FEF4F60015FCA3 /* UserCompleteDetailsViewControllerPresenter.swift in Sources */,
+				8CB7D40029FEF5B90015FCA3 /* UserCompleteDetailsViewControllerRouter.swift in Sources */,
 				8CB7D3E229FEDAC00015FCA3 /* UsersViewControllerPresenter.swift in Sources */,
 				8CB7D3F829FEF25B0015FCA3 /* UserCompleteDetailsViewController.swift in Sources */,
 			);

@@ -7,10 +7,23 @@
 
 import UIKit
 
-class UserCompleteDetailsViewController: UIViewController {
+class UserCompleteDetailsViewController: UIViewController, UserCompleteDetailsViewControllerDisplaying {
+    var presenter: UserCompleteDetailsViewControllerPresenting!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+    }
+    
+    deinit{
+        debugPrint("UserCompleteDetailsViewController init")
+    }
+    
+    func setupUI() {
+        
+    }
+    
+    func reloadData() {
+        
     }
 }

@@ -26,8 +26,9 @@ class UsersViewControllerRouter:UsersViewControllerRouting{
     }
     
     func showUserCompleteDetailScreen(userInfo: UserViewControllerEntity) {
-        guard let navigationController = (view as? UIViewController)?.navigationController else {return}
-        let viewController = UserCompleteDetailsViewController(nibName: "UserCompleteDetailsViewController", bundle: .main)
+        guard let navigationController = (view as? UIViewController)?.navigationController,
+        let viewController = UserCompleteDetailsViewControllerRouter.make(user: userInfo) else {return}
+        
         navigationController.pushViewController(viewController, animated: true)
     }
 }

@@ -8,7 +8,13 @@
 import Foundation
 
 class UsersViewControllerInteractor:UsersViewControllerInteracting{
-    func loadUsers() {
-        
+    func fetchUsersRequest() async throws -> [UserViewControllerEntity] {
+        let request = await UsersRequest().send()
+        switch request {
+        case .success(let success):
+            return success
+        case .failure(let failure):
+            throw failure
+        }
     }
 }

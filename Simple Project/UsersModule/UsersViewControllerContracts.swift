@@ -18,12 +18,13 @@ protocol UsersViewControllerPresenting:AnyObject{
     var view:UsersViewControllerDisplaying? {get set}
     var router:UsersViewControllerRouting? {get}
     var interactor: UsersViewControllerInteracting? {get set}
+    var users:[UserViewControllerEntity]? {get}
     func viewDidLoad()
-    func loadUsers()
+    func fetchUsers()
 }
 
 protocol UsersViewControllerInteracting:AnyObject{
-    func loadUsers()
+    func fetchUsersRequest() async throws -> [UserViewControllerEntity]
 }
 
 protocol UsersViewControllerRouting:AnyObject{

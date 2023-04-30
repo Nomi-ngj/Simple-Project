@@ -20,10 +20,10 @@ class UsersViewController: UIViewController, UsersViewControllerDisplaying {
     }
     
     func setupUI() {
-        
+        debugPrint("setupUI")
     }
     
     func reloadData() {
-        
+        debugPrint("reloadData")
     }
 }

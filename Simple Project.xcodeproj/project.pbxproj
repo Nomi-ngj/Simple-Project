@@ -21,6 +21,10 @@
 		8CB7D3E229FEDAC00015FCA3 /* UsersViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7D3E129FEDAC00015FCA3 /* UsersViewControllerPresenter.swift */; };
 		8CB7D3E429FEDAC70015FCA3 /* UsersViewControllerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7D3E329FEDAC70015FCA3 /* UsersViewControllerRouter.swift */; };
 		8CB7D3E629FEDAD00015FCA3 /* UsersViewControllerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7D3E529FEDAD00015FCA3 /* UsersViewControllerInteractor.swift */; };
+		8CB7D3E829FEE13B0015FCA3 /* UserViewControllerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7D3E729FEE13B0015FCA3 /* UserViewControllerEntity.swift */; };
+		8CB7D3EB29FEE2630015FCA3 /* SpiderWebService in Frameworks */ = {isa = PBXBuildFile; productRef = 8CB7D3EA29FEE2630015FCA3 /* SpiderWebService */; };
+		8CB7D3EE29FEE2A00015FCA3 /* NetworkConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7D3ED29FEE2A00015FCA3 /* NetworkConstant.swift */; };
+		8CB7D3F029FEE2AF0015FCA3 /* UsersRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7D3EF29FEE2AF0015FCA3 /* UsersRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +63,9 @@
 		8CB7D3E129FEDAC00015FCA3 /* UsersViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewControllerPresenter.swift; sourceTree = "<group>"; };
 		8CB7D3E329FEDAC70015FCA3 /* UsersViewControllerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewControllerRouter.swift; sourceTree = "<group>"; };
 		8CB7D3E529FEDAD00015FCA3 /* UsersViewControllerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewControllerInteractor.swift; sourceTree = "<group>"; };
+		8CB7D3E729FEE13B0015FCA3 /* UserViewControllerEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewControllerEntity.swift; sourceTree = "<group>"; };
+		8CB7D3ED29FEE2A00015FCA3 /* NetworkConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstant.swift; sourceTree = "<group>"; };
+		8CB7D3EF29FEE2AF0015FCA3 /* UsersRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CB7D3EB29FEE2630015FCA3 /* SpiderWebService in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +117,7 @@
 		8CB7D3A829FE66DA0015FCA3 /* Simple Project */ = {
 			isa = PBXGroup;
 			children = (
+				8CB7D3EC29FEE2910015FCA3 /* Networking */,
 				8CB7D3DA29FED7F30015FCA3 /* UsersModule */,
 				8CB7D3A929FE66DA0015FCA3 /* AppDelegate.swift */,
 				8CB7D3AB29FE66DA0015FCA3 /* SceneDelegate.swift */,
@@ -146,8 +155,18 @@
 				8CB7D3E129FEDAC00015FCA3 /* UsersViewControllerPresenter.swift */,
 				8CB7D3E329FEDAC70015FCA3 /* UsersViewControllerRouter.swift */,
 				8CB7D3E529FEDAD00015FCA3 /* UsersViewControllerInteractor.swift */,
+				8CB7D3E729FEE13B0015FCA3 /* UserViewControllerEntity.swift */,
 			);
 			path = UsersModule;
+			sourceTree = "<group>";
+		};
+		8CB7D3EC29FEE2910015FCA3 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				8CB7D3ED29FEE2A00015FCA3 /* NetworkConstant.swift */,
+				8CB7D3EF29FEE2AF0015FCA3 /* UsersRequest.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +185,9 @@
 			dependencies = (
 			);
 			name = "Simple Project";
+			packageProductDependencies = (
+				8CB7D3EA29FEE2630015FCA3 /* SpiderWebService */,
+			);
 			productName = "Simple Project";
 			productReference = 8CB7D3A629FE66DA0015FCA3 /* Simple Project.app */;
 			productType = "com.apple.product-type.application";
@@ -238,6 +260,9 @@
 				Base,
 			);
 			mainGroup = 8CB7D39D29FE66DA0015FCA3;
+			packageReferences = (
+				8CB7D3E929FEE2630015FCA3 /* XCRemoteSwiftPackageReference "SpiderWebService" */,
+			);
 			productRefGroup = 8CB7D3A729FE66DA0015FCA3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -286,8 +311,11 @@
 				8CB7D3AA29FE66DA0015FCA3 /* AppDelegate.swift in Sources */,
 				8CB7D3AC29FE66DA0015FCA3 /* SceneDelegate.swift in Sources */,
 				8CB7D3E629FEDAD00015FCA3 /* UsersViewControllerInteractor.swift in Sources */,
+				8CB7D3E829FEE13B0015FCA3 /* UserViewControllerEntity.swift in Sources */,
 				8CB7D3E029FEDA610015FCA3 /* UsersViewControllerContracts.swift in Sources */,
 				8CB7D3E429FEDAC70015FCA3 /* UsersViewControllerRouter.swift in Sources */,
+				8CB7D3EE29FEE2A00015FCA3 /* NetworkConstant.swift in Sources */,
+				8CB7D3F029FEE2AF0015FCA3 /* UsersRequest.swift in Sources */,
 				8CB7D3E229FEDAC00015FCA3 /* UsersViewControllerPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -630,6 +658,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8CB7D3E929FEE2630015FCA3 /* XCRemoteSwiftPackageReference "SpiderWebService" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Nomi-ngj/SpiderWebService.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8CB7D3EA29FEE2630015FCA3 /* SpiderWebService */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8CB7D3E929FEE2630015FCA3 /* XCRemoteSwiftPackageReference "SpiderWebService" */;
+			productName = SpiderWebService;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8CB7D39E29FE66DA0015FCA3 /* Project object */;
 }

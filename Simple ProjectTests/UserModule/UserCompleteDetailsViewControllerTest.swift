@@ -15,7 +15,7 @@ final class UserCompleteDetailsViewControllerTest: XCTestCase {
     override func setUp() {
         super.setUp()
         
-        self.sut = UserCompleteDetailsViewControllerRouter.make(user: .init(id: 01, name: "Nouman Gul Junejo", username: "Nomi-NGJ", email: "Noumanguljunejo@gmail.com", address: .init(street: "none", suite: "123", city: "Karachi", zipcode: "0000", geo: .init(lat: "11.23333", lng: "23.34543")), phone: "+923458942580", website: "none", company: .init(name: "NGiDeveloper", catchPhrase: "Remote", bs: "IOS Developer"))) as? UserCompleteDetailsViewController
+        self.sut = UserCompleteDetailsViewControllerRouter.make(user: MockUserEntity.mockUser) as? UserCompleteDetailsViewController
         self.sut.loadView()
         self.sut.viewDidLoad()
     }

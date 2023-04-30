@@ -33,6 +33,8 @@
 		8CB7D40429FEF8C00015FCA3 /* UserCompleteDetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CB7D40229FEF8C00015FCA3 /* UserCompleteDetailsCell.xib */; };
 		8CB7D40829FEFF200015FCA3 /* UsersViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7D40729FEFF200015FCA3 /* UsersViewControllerTest.swift */; };
 		8CB7D40A29FF01C20015FCA3 /* UserCompleteDetailsViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7D40929FF01C20015FCA3 /* UserCompleteDetailsViewControllerTest.swift */; };
+		8CB7D40E29FF03C80015FCA3 /* MockUserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7D40D29FF03C80015FCA3 /* MockUserEntity.swift */; };
+		8CB7D41029FF04430015FCA3 /* UserViewControllerEntityTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7D40F29FF04430015FCA3 /* UserViewControllerEntityTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,8 @@
 		8CB7D40629FEFDDE0015FCA3 /* Simple Project.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Simple Project.xctestplan"; sourceTree = "<group>"; };
 		8CB7D40729FEFF200015FCA3 /* UsersViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewControllerTest.swift; sourceTree = "<group>"; };
 		8CB7D40929FF01C20015FCA3 /* UserCompleteDetailsViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCompleteDetailsViewControllerTest.swift; sourceTree = "<group>"; };
+		8CB7D40D29FF03C80015FCA3 /* MockUserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserEntity.swift; sourceTree = "<group>"; };
+		8CB7D40F29FF04430015FCA3 /* UserViewControllerEntityTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewControllerEntityTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,8 +137,7 @@
 		8CB7D3BF29FE66DB0015FCA3 /* Simple ProjectTests */ = {
 			isa = PBXGroup;
 			children = (
-				8CB7D40729FEFF200015FCA3 /* UsersViewControllerTest.swift */,
-				8CB7D40929FF01C20015FCA3 /* UserCompleteDetailsViewControllerTest.swift */,
+				8CB7D40C29FF03AC0015FCA3 /* UserModule */,
 			);
 			path = "Simple ProjectTests";
 			sourceTree = "<group>";
@@ -193,6 +196,25 @@
 				8CB7D40229FEF8C00015FCA3 /* UserCompleteDetailsCell.xib */,
 			);
 			path = CELL;
+			sourceTree = "<group>";
+		};
+		8CB7D40B29FF03A40015FCA3 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				8CB7D40D29FF03C80015FCA3 /* MockUserEntity.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		8CB7D40C29FF03AC0015FCA3 /* UserModule */ = {
+			isa = PBXGroup;
+			children = (
+				8CB7D40B29FF03A40015FCA3 /* Mock */,
+				8CB7D40729FEFF200015FCA3 /* UsersViewControllerTest.swift */,
+				8CB7D40929FF01C20015FCA3 /* UserCompleteDetailsViewControllerTest.swift */,
+				8CB7D40F29FF04430015FCA3 /* UserViewControllerEntityTest.swift */,
+			);
+			path = UserModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,8 +351,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CB7D41029FF04430015FCA3 /* UserViewControllerEntityTest.swift in Sources */,
 				8CB7D40A29FF01C20015FCA3 /* UserCompleteDetailsViewControllerTest.swift in Sources */,
 				8CB7D40829FEFF200015FCA3 /* UsersViewControllerTest.swift in Sources */,
+				8CB7D40E29FF03C80015FCA3 /* MockUserEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

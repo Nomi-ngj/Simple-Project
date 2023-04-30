@@ -20,6 +20,10 @@ struct UserViewControllerEntity: Codable {
 struct Address: Codable {
     let street, suite, city, zipcode: String?
     let geo: Geo?
+    
+    var completeAddress:String {
+        return "\(street ?? "") \(suite ?? "") \(city ?? "") \(zipcode ?? "") "
+    }
 }
 
 // MARK: - Geo

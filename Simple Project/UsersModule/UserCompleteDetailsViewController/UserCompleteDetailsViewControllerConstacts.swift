@@ -10,6 +10,7 @@ import UIKit
 
 protocol UserCompleteDetailsViewControllerDisplaying: AnyObject{
     var presenter: UserCompleteDetailsViewControllerPresenting! {get set}
+    var tableView: UITableView! {get}
     func setupUI()
     func reloadData()
 }

@@ -32,6 +32,8 @@
 		8CB7D3FC29FEF4F60015FCA3 /* UserCompleteDetailsViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7D3FB29FEF4F60015FCA3 /* UserCompleteDetailsViewControllerPresenter.swift */; };
 		8CB7D3FE29FEF5360015FCA3 /* UserCompleteDetailsViewControllerConstacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7D3FD29FEF5360015FCA3 /* UserCompleteDetailsViewControllerConstacts.swift */; };
 		8CB7D40029FEF5B90015FCA3 /* UserCompleteDetailsViewControllerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7D3FF29FEF5B90015FCA3 /* UserCompleteDetailsViewControllerRouter.swift */; };
+		8CB7D40329FEF8C00015FCA3 /* UserCompleteDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7D40129FEF8C00015FCA3 /* UserCompleteDetailsCell.swift */; };
+		8CB7D40429FEF8C00015FCA3 /* UserCompleteDetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CB7D40229FEF8C00015FCA3 /* UserCompleteDetailsCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,8 @@
 		8CB7D3FB29FEF4F60015FCA3 /* UserCompleteDetailsViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCompleteDetailsViewControllerPresenter.swift; sourceTree = "<group>"; };
 		8CB7D3FD29FEF5360015FCA3 /* UserCompleteDetailsViewControllerConstacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCompleteDetailsViewControllerConstacts.swift; sourceTree = "<group>"; };
 		8CB7D3FF29FEF5B90015FCA3 /* UserCompleteDetailsViewControllerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCompleteDetailsViewControllerRouter.swift; sourceTree = "<group>"; };
+		8CB7D40129FEF8C00015FCA3 /* UserCompleteDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCompleteDetailsCell.swift; sourceTree = "<group>"; };
+		8CB7D40229FEF8C00015FCA3 /* UserCompleteDetailsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCompleteDetailsCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +201,7 @@
 		8CB7D3FA29FEF2600015FCA3 /* UserCompleteDetailsViewController */ = {
 			isa = PBXGroup;
 			children = (
+				8CB7D40529FEF9C30015FCA3 /* CELL */,
 				8CB7D3F629FEF25B0015FCA3 /* UserCompleteDetailsViewController.swift */,
 				8CB7D3F729FEF25B0015FCA3 /* UserCompleteDetailsViewController.xib */,
 				8CB7D3FB29FEF4F60015FCA3 /* UserCompleteDetailsViewControllerPresenter.swift */,
@@ -204,6 +209,15 @@
 				8CB7D3FF29FEF5B90015FCA3 /* UserCompleteDetailsViewControllerRouter.swift */,
 			);
 			path = UserCompleteDetailsViewController;
+			sourceTree = "<group>";
+		};
+		8CB7D40529FEF9C30015FCA3 /* CELL */ = {
+			isa = PBXGroup;
+			children = (
+				8CB7D40129FEF8C00015FCA3 /* UserCompleteDetailsCell.swift */,
+				8CB7D40229FEF8C00015FCA3 /* UserCompleteDetailsCell.xib */,
+			);
+			path = CELL;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,6 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CB7D3B629FE66DB0015FCA3 /* LaunchScreen.storyboard in Resources */,
+				8CB7D40429FEF8C00015FCA3 /* UserCompleteDetailsCell.xib in Resources */,
 				8CB7D3DE29FED8110015FCA3 /* UsersViewController.xib in Resources */,
 				8CB7D3B329FE66DB0015FCA3 /* Assets.xcassets in Resources */,
 				8CB7D3F929FEF25B0015FCA3 /* UserCompleteDetailsViewController.xib in Resources */,
@@ -352,6 +367,7 @@
 				8CB7D3AC29FE66DA0015FCA3 /* SceneDelegate.swift in Sources */,
 				8CB7D3E629FEDAD00015FCA3 /* UsersViewControllerInteractor.swift in Sources */,
 				8CB7D3E829FEE13B0015FCA3 /* UserViewControllerEntity.swift in Sources */,
+				8CB7D40329FEF8C00015FCA3 /* UserCompleteDetailsCell.swift in Sources */,
 				8CB7D3FE29FEF5360015FCA3 /* UserCompleteDetailsViewControllerConstacts.swift in Sources */,
 				8CB7D3E029FEDA610015FCA3 /* UsersViewControllerContracts.swift in Sources */,
 				8CB7D3E429FEDAC70015FCA3 /* UsersViewControllerRouter.swift in Sources */,

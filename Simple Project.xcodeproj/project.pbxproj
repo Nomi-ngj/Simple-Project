@@ -12,7 +12,6 @@
 		8CB7D3B129FE66DA0015FCA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CB7D3AF29FE66DA0015FCA3 /* Main.storyboard */; };
 		8CB7D3B329FE66DB0015FCA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CB7D3B229FE66DB0015FCA3 /* Assets.xcassets */; };
 		8CB7D3B629FE66DB0015FCA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CB7D3B429FE66DB0015FCA3 /* LaunchScreen.storyboard */; };
-		8CB7D3C129FE66DB0015FCA3 /* Simple_ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7D3C029FE66DB0015FCA3 /* Simple_ProjectTests.swift */; };
 		8CB7D3DD29FED8110015FCA3 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7D3DB29FED8110015FCA3 /* UsersViewController.swift */; };
 		8CB7D3DE29FED8110015FCA3 /* UsersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CB7D3DC29FED8110015FCA3 /* UsersViewController.xib */; };
 		8CB7D3E029FEDA610015FCA3 /* UsersViewControllerContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7D3DF29FEDA610015FCA3 /* UsersViewControllerContracts.swift */; };
@@ -32,6 +31,8 @@
 		8CB7D40029FEF5B90015FCA3 /* UserCompleteDetailsViewControllerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7D3FF29FEF5B90015FCA3 /* UserCompleteDetailsViewControllerRouter.swift */; };
 		8CB7D40329FEF8C00015FCA3 /* UserCompleteDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7D40129FEF8C00015FCA3 /* UserCompleteDetailsCell.swift */; };
 		8CB7D40429FEF8C00015FCA3 /* UserCompleteDetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CB7D40229FEF8C00015FCA3 /* UserCompleteDetailsCell.xib */; };
+		8CB7D40829FEFF200015FCA3 /* UsersViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7D40729FEFF200015FCA3 /* UsersViewControllerTest.swift */; };
+		8CB7D40A29FF01C20015FCA3 /* UserCompleteDetailsViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7D40929FF01C20015FCA3 /* UserCompleteDetailsViewControllerTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +54,6 @@
 		8CB7D3B529FE66DB0015FCA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8CB7D3B729FE66DB0015FCA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8CB7D3BC29FE66DB0015FCA3 /* Simple ProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Simple ProjectTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8CB7D3C029FE66DB0015FCA3 /* Simple_ProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simple_ProjectTests.swift; sourceTree = "<group>"; };
 		8CB7D3DB29FED8110015FCA3 /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
 		8CB7D3DC29FED8110015FCA3 /* UsersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsersViewController.xib; sourceTree = "<group>"; };
 		8CB7D3DF29FEDA610015FCA3 /* UsersViewControllerContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewControllerContracts.swift; sourceTree = "<group>"; };
@@ -73,6 +73,8 @@
 		8CB7D40129FEF8C00015FCA3 /* UserCompleteDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCompleteDetailsCell.swift; sourceTree = "<group>"; };
 		8CB7D40229FEF8C00015FCA3 /* UserCompleteDetailsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCompleteDetailsCell.xib; sourceTree = "<group>"; };
 		8CB7D40629FEFDDE0015FCA3 /* Simple Project.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Simple Project.xctestplan"; sourceTree = "<group>"; };
+		8CB7D40729FEFF200015FCA3 /* UsersViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewControllerTest.swift; sourceTree = "<group>"; };
+		8CB7D40929FF01C20015FCA3 /* UserCompleteDetailsViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCompleteDetailsViewControllerTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,7 +133,8 @@
 		8CB7D3BF29FE66DB0015FCA3 /* Simple ProjectTests */ = {
 			isa = PBXGroup;
 			children = (
-				8CB7D3C029FE66DB0015FCA3 /* Simple_ProjectTests.swift */,
+				8CB7D40729FEFF200015FCA3 /* UsersViewControllerTest.swift */,
+				8CB7D40929FF01C20015FCA3 /* UserCompleteDetailsViewControllerTest.swift */,
 			);
 			path = "Simple ProjectTests";
 			sourceTree = "<group>";
@@ -326,7 +329,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CB7D3C129FE66DB0015FCA3 /* Simple_ProjectTests.swift in Sources */,
+				8CB7D40A29FF01C20015FCA3 /* UserCompleteDetailsViewControllerTest.swift in Sources */,
+				8CB7D40829FEFF200015FCA3 /* UsersViewControllerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

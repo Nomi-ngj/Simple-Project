@@ -1,0 +1,29 @@
+{
+  "configurations" : [
+    {
+      "id" : "19ABD177-D187-41D3-B9D5-6CD119A04039",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Simple Project.xcodeproj",
+      "identifier" : "8CB7D3A529FE66DA0015FCA3",
+      "name" : "Simple Project"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Simple Project.xcodeproj",
+        "identifier" : "8CB7D3BB29FE66DB0015FCA3",
+        "name" : "Simple ProjectTests"
+      }
+    }
+  ],
+  "version" : 1
+}

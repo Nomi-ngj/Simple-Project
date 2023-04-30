@@ -23,6 +23,7 @@ protocol UsersViewControllerPresenting:AnyObject{
     var title:String {get}
     func viewDidLoad()
     func fetchUsers()
+    func didSelect(at indexPath:IndexPath)
 }
 
 protocol UsersViewControllerInteracting:AnyObject{
@@ -32,4 +33,5 @@ protocol UsersViewControllerInteracting:AnyObject{
 protocol UsersViewControllerRouting:AnyObject{
     var view:UsersViewControllerDisplaying? {get}
     static func make() -> UIViewController?
+    func showUserCompleteDetailScreen(userInfo:UserViewControllerEntity)
 }

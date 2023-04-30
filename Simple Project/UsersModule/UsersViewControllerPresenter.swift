@@ -35,4 +35,10 @@ class UsersViewControllerPresenter:UsersViewControllerPresenting{
     deinit{
         debugPrint("UsersViewControllerPresenter deinit")
     }
+    
+    func didSelect(at indexPath: IndexPath) {
+        if let userInfo = users?[indexPath.row]{
+            router?.showUserCompleteDetailScreen(userInfo: userInfo)
+        }
+    }
 }

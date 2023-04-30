@@ -17,6 +17,10 @@
 		8CB7D3CD29FE66DB0015FCA3 /* Simple_ProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7D3CC29FE66DB0015FCA3 /* Simple_ProjectUITestsLaunchTests.swift */; };
 		8CB7D3DD29FED8110015FCA3 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7D3DB29FED8110015FCA3 /* UsersViewController.swift */; };
 		8CB7D3DE29FED8110015FCA3 /* UsersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CB7D3DC29FED8110015FCA3 /* UsersViewController.xib */; };
+		8CB7D3E029FEDA610015FCA3 /* UsersViewControllerContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7D3DF29FEDA610015FCA3 /* UsersViewControllerContracts.swift */; };
+		8CB7D3E229FEDAC00015FCA3 /* UsersViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7D3E129FEDAC00015FCA3 /* UsersViewControllerPresenter.swift */; };
+		8CB7D3E429FEDAC70015FCA3 /* UsersViewControllerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7D3E329FEDAC70015FCA3 /* UsersViewControllerRouter.swift */; };
+		8CB7D3E629FEDAD00015FCA3 /* UsersViewControllerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7D3E529FEDAD00015FCA3 /* UsersViewControllerInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,10 @@
 		8CB7D3CC29FE66DB0015FCA3 /* Simple_ProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simple_ProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8CB7D3DB29FED8110015FCA3 /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
 		8CB7D3DC29FED8110015FCA3 /* UsersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsersViewController.xib; sourceTree = "<group>"; };
+		8CB7D3DF29FEDA610015FCA3 /* UsersViewControllerContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewControllerContracts.swift; sourceTree = "<group>"; };
+		8CB7D3E129FEDAC00015FCA3 /* UsersViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewControllerPresenter.swift; sourceTree = "<group>"; };
+		8CB7D3E329FEDAC70015FCA3 /* UsersViewControllerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewControllerRouter.swift; sourceTree = "<group>"; };
+		8CB7D3E529FEDAD00015FCA3 /* UsersViewControllerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewControllerInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +142,10 @@
 			children = (
 				8CB7D3DB29FED8110015FCA3 /* UsersViewController.swift */,
 				8CB7D3DC29FED8110015FCA3 /* UsersViewController.xib */,
+				8CB7D3DF29FEDA610015FCA3 /* UsersViewControllerContracts.swift */,
+				8CB7D3E129FEDAC00015FCA3 /* UsersViewControllerPresenter.swift */,
+				8CB7D3E329FEDAC70015FCA3 /* UsersViewControllerRouter.swift */,
+				8CB7D3E529FEDAD00015FCA3 /* UsersViewControllerInteractor.swift */,
 			);
 			path = UsersModule;
 			sourceTree = "<group>";
@@ -273,6 +285,10 @@
 				8CB7D3DD29FED8110015FCA3 /* UsersViewController.swift in Sources */,
 				8CB7D3AA29FE66DA0015FCA3 /* AppDelegate.swift in Sources */,
 				8CB7D3AC29FE66DA0015FCA3 /* SceneDelegate.swift in Sources */,
+				8CB7D3E629FEDAD00015FCA3 /* UsersViewControllerInteractor.swift in Sources */,
+				8CB7D3E029FEDA610015FCA3 /* UsersViewControllerContracts.swift in Sources */,
+				8CB7D3E429FEDAC70015FCA3 /* UsersViewControllerRouter.swift in Sources */,
+				8CB7D3E229FEDAC00015FCA3 /* UsersViewControllerPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

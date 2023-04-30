@@ -12,11 +12,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate{
     var window: UIWindow?
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let _ = (scene as? UIWindowScene) else { return }
-        let viewController = UsersViewController(nibName: "UsersViewController", bundle: Bundle.main)
+//        let viewController = UsersViewController(nibName: "UsersViewController", bundle: Bundle.main)
+        guard let viewController = UsersViewControllerRouter.make() else {return}
         let navigationController =
         UINavigationController(rootViewController:
                                 viewController)
         self.window?.rootViewController = navigationController
-    } 
+    }
 }
 

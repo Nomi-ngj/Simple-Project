@@ -35,6 +35,11 @@
 		8CB7D40A29FF01C20015FCA3 /* UserCompleteDetailsViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7D40929FF01C20015FCA3 /* UserCompleteDetailsViewControllerTest.swift */; };
 		8CB7D40E29FF03C80015FCA3 /* MockUserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7D40D29FF03C80015FCA3 /* MockUserEntity.swift */; };
 		8CB7D41029FF04430015FCA3 /* UserViewControllerEntityTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7D40F29FF04430015FCA3 /* UserViewControllerEntityTest.swift */; };
+		8CB7D41229FF88190015FCA3 /* MockUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7D41129FF88190015FCA3 /* MockUsersViewController.swift */; };
+		8CB7D41429FF888B0015FCA3 /* MockUsersViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7D41329FF888B0015FCA3 /* MockUsersViewPresenter.swift */; };
+		8CB7D41629FF895A0015FCA3 /* MockUsersViewControllerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7D41529FF895A0015FCA3 /* MockUsersViewControllerRouter.swift */; };
+		8CB7D41829FF89E30015FCA3 /* MockUsersViewControllerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7D41729FF89E30015FCA3 /* MockUsersViewControllerInteractor.swift */; };
+		8CB7D41A29FF8B0D0015FCA3 /* UserViewControllerPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7D41929FF8B0D0015FCA3 /* UserViewControllerPresenterTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +84,11 @@
 		8CB7D40929FF01C20015FCA3 /* UserCompleteDetailsViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCompleteDetailsViewControllerTest.swift; sourceTree = "<group>"; };
 		8CB7D40D29FF03C80015FCA3 /* MockUserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserEntity.swift; sourceTree = "<group>"; };
 		8CB7D40F29FF04430015FCA3 /* UserViewControllerEntityTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewControllerEntityTest.swift; sourceTree = "<group>"; };
+		8CB7D41129FF88190015FCA3 /* MockUsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUsersViewController.swift; sourceTree = "<group>"; };
+		8CB7D41329FF888B0015FCA3 /* MockUsersViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUsersViewPresenter.swift; sourceTree = "<group>"; };
+		8CB7D41529FF895A0015FCA3 /* MockUsersViewControllerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUsersViewControllerRouter.swift; sourceTree = "<group>"; };
+		8CB7D41729FF89E30015FCA3 /* MockUsersViewControllerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUsersViewControllerInteractor.swift; sourceTree = "<group>"; };
+		8CB7D41929FF8B0D0015FCA3 /* UserViewControllerPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewControllerPresenterTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +212,10 @@
 			isa = PBXGroup;
 			children = (
 				8CB7D40D29FF03C80015FCA3 /* MockUserEntity.swift */,
+				8CB7D41129FF88190015FCA3 /* MockUsersViewController.swift */,
+				8CB7D41329FF888B0015FCA3 /* MockUsersViewPresenter.swift */,
+				8CB7D41529FF895A0015FCA3 /* MockUsersViewControllerRouter.swift */,
+				8CB7D41729FF89E30015FCA3 /* MockUsersViewControllerInteractor.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -213,6 +227,7 @@
 				8CB7D40729FEFF200015FCA3 /* UsersViewControllerTest.swift */,
 				8CB7D40929FF01C20015FCA3 /* UserCompleteDetailsViewControllerTest.swift */,
 				8CB7D40F29FF04430015FCA3 /* UserViewControllerEntityTest.swift */,
+				8CB7D41929FF8B0D0015FCA3 /* UserViewControllerPresenterTest.swift */,
 			);
 			path = UserModule;
 			sourceTree = "<group>";
@@ -351,9 +366,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CB7D41829FF89E30015FCA3 /* MockUsersViewControllerInteractor.swift in Sources */,
 				8CB7D41029FF04430015FCA3 /* UserViewControllerEntityTest.swift in Sources */,
+				8CB7D41A29FF8B0D0015FCA3 /* UserViewControllerPresenterTest.swift in Sources */,
 				8CB7D40A29FF01C20015FCA3 /* UserCompleteDetailsViewControllerTest.swift in Sources */,
+				8CB7D41229FF88190015FCA3 /* MockUsersViewController.swift in Sources */,
+				8CB7D41629FF895A0015FCA3 /* MockUsersViewControllerRouter.swift in Sources */,
 				8CB7D40829FEFF200015FCA3 /* UsersViewControllerTest.swift in Sources */,
+				8CB7D41429FF888B0015FCA3 /* MockUsersViewPresenter.swift in Sources */,
 				8CB7D40E29FF03C80015FCA3 /* MockUserEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

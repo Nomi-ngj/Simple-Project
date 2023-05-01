@@ -17,9 +17,9 @@ protocol UsersViewControllerDisplaying: AnyObject{
 
 protocol UsersViewControllerPresenting:AnyObject{
     var view:UsersViewControllerDisplaying? {get set}
-    var router:UsersViewControllerRouting? {get}
+    var router:UsersViewControllerRouting? {get set}
     var interactor: UsersViewControllerInteracting? {get set}
-    var users:[UserViewControllerEntity]? {get}
+    var users:[UserViewControllerEntity]? {get set}
     var title:String {get}
     func viewDidLoad()
     func fetchUsers()

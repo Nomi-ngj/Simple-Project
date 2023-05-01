@@ -29,14 +29,40 @@ final class UserCompleteDetailsViewControllerTest: XCTestCase {
         XCTAssertNotNil(sut.tableView)
     }
     
-//    func testTableViewCellHasReuseIdentifier() {
-//        sut.viewDidLoad()
-//        let indexPath = IndexPath(row: 0, section: 0)
-//        let cell = sut.tableView(sut.tableView, cellForRowAt: indexPath) as? ViewControllerCell
-//        let actualReuseIdentifer = cell?.reuseIdentifier
-//        let expectedReuseIdentifier = "ViewControllerCell"
-//        XCTAssertEqual(actualReuseIdentifer, expectedReuseIdentifier)
-//    }
+    func testRegisterUserTableViewCell() {
+
+        sut.setupUI()
+        let cell = sut.tableView.dequeueReusableCell(withIdentifier: "UserCompleteDetailsCell") as? UserCompleteDetailsCell
+        XCTAssertNotNil(cell)
+    }
+    
+    func testRegisterUserTableViewCellConfig() {
+        sut.setupUI()
+        
+        let cell = sut.tableView.dequeueReusableCell(withIdentifier: "UserCompleteDetailsCell") as! UserCompleteDetailsCell
+        let user = MockUserEntity.mockUser
+        
+        DispatchQueue.main.async {
+            XCTAssertNoThrow(cell.config(viewModel: user))
+            XCTAssertNotNil(cell.lblUserName)
+            XCTAssertNotNil(cell.lblFullName)
+            XCTAssertNotNil(cell.lblEmail)
+            XCTAssertNotNil(cell.lblPhone)
+            XCTAssertNotNil(cell.lblAddress)
+            XCTAssertNotNil(cell.lblCompany)
+            XCTAssertNotNil(cell.lblDesignation)
+            XCTAssertNotNil(cell.lblWebsite)
+            
+            XCTAssertEqual(cell.lblUserName.text, user.username)
+            XCTAssertEqual(cell.lblFullName.text, user.name)
+            XCTAssertEqual(cell.lblEmail.text, user.email)
+            XCTAssertEqual(cell.lblPhone.text, user.phone)
+            XCTAssertEqual(cell.lblAddress.text, user.address.completeAddress)
+            XCTAssertEqual(cell.lblCompany.text, user.company.name)
+            XCTAssertEqual(cell.lblDesignation.text, user.company.bs)
+            XCTAssertEqual(cell.lblWebsite.text, user.website)
+        }
+    }
     
     func testHasAPresenter(){
         XCTAssertNotNil(sut.presenter)
@@ -48,7 +74,6 @@ final class UserCompleteDetailsViewControllerTest: XCTestCase {
     
     func testTableViewConformsToTableViewDataSourceProtocol() {
         XCTAssertTrue(sut.conforms(to: UITableViewDataSource.self))
-//        XCTAssertTrue(sut.responds(to: #selector(sut.numberOfSections(in:))))
         XCTAssertTrue(sut.responds(to: #selector(sut.tableView(_:numberOfRowsInSection:))))
         XCTAssertTrue(sut.responds(to: #selector(sut.tableView(_:cellForRowAt:))))
     }

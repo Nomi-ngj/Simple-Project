@@ -22,6 +22,4 @@ class MockUsersViewController: UsersViewControllerDisplaying {
     func reloadData() {
         reloadDataWasCalled = true
     }
-    
-
 }

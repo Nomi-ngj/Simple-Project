@@ -11,11 +11,22 @@ import XCTest
 final class UsersViewControllerTest: XCTestCase {
     
     var sut:UsersViewController!
-
+    var router: MockUsersViewControllerRouter?
+    var interactor: MockUsersViewControllerInteractor?
+    var presenter: MockUsersViewControllerPresenter?
+    
     override func setUp() {
         super.setUp()
         
         self.sut = UsersViewControllerRouter.make() as? UsersViewController
+        router = MockUsersViewControllerRouter()
+        interactor = MockUsersViewControllerInteractor()
+        presenter = MockUsersViewControllerPresenter()
+        
+        presenter?.interactor = interactor
+        presenter?.router = router
+        
+        sut.presenter = presenter
         self.sut.loadView()
         self.sut.viewDidLoad()
     }
@@ -28,15 +39,6 @@ final class UsersViewControllerTest: XCTestCase {
     func testHasATableView(){
         XCTAssertNotNil(sut.tableView)
     }
-    
-//    func testTableViewCellHasReuseIdentifier() {
-//        sut.viewDidLoad()
-//        let indexPath = IndexPath(row: 0, section: 0)
-//        let cell = sut.tableView(sut.tableView, cellForRowAt: indexPath) as? ViewControllerCell
-//        let actualReuseIdentifer = cell?.reuseIdentifier
-//        let expectedReuseIdentifier = "ViewControllerCell"
-//        XCTAssertEqual(actualReuseIdentifer, expectedReuseIdentifier)
-//    }
     
     func testHasAPresenter(){
         XCTAssertNotNil(sut.presenter)
@@ -59,5 +61,56 @@ final class UsersViewControllerTest: XCTestCase {
     
     func testTableViewHasDataSource() {
         XCTAssertNotNil(sut.tableView.dataSource)
+    }
+    
+    func testRegisterUserTableViewCell() {
+
+        sut.setupUI()
+        let cell = sut.tableView.dequeueReusableCell(withIdentifier: "UserTableViewCell") as? UserTableViewCell
+        XCTAssertNotNil(cell)
+    }
+    
+    func testRegisterUserTableViewCellConfig() {
+        sut.setupUI()
+        
+        let cell = sut.tableView.dequeueReusableCell(withIdentifier: "UserTableViewCell") as! UserTableViewCell
+        let user = MockUserEntity.mockUser
+        
+        DispatchQueue.main.async {
+            XCTAssertNoThrow(cell.config(viewModel: user))
+            
+            XCTAssertEqual(cell.lblUserName.text, user.username)
+            XCTAssertEqual(cell.lblFullName.text, user.name)
+            XCTAssertEqual(cell.lblEmail.text, user.email)
+            XCTAssertEqual(cell.lblPhone.text, user.phone)
+        }
+    }
+    
+    func testTableViewSelection() {
+        presenter?.users = [MockUserEntity.mockUser]
+        sut.reloadData()
+        let indexPath = IndexPath(row: 0, section: 0)
+        sut.tableView.selectRow(at: indexPath, animated: false, scrollPosition: .none)
+        XCTAssertEqual(sut.tableView.indexPathForSelectedRow, indexPath)
+    }
+    
+    func testViewDidLoad(){
+        sut.viewDidLoad()
+        
+        XCTAssertTrue(presenter!.viewDidLoadWasCalled)
+    }
+
+    
+    func testViewDidLoadSuccessFetchUsers(){
+        presenter?.users = [MockUserEntity.mockUser]
+        sut.viewDidLoad()
+        
+        XCTAssertTrue(presenter!.fetchUsersSuccessWasCalled)
+    }
+    
+    func testViewDidLoadFailedToFetchUsers(){
+        sut.viewDidLoad()
+        
+        XCTAssertTrue(presenter!.fetchUsersFailedWasCalled)
     }
 }

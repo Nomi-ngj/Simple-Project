@@ -23,10 +23,9 @@ class UserCompleteDetailsCell: UITableViewCell {
         lblEmail.text = viewModel.email
         lblPhone.text = viewModel.phone
         
-        lblAddress.text = viewModel.address?.completeAddress
-        lblCompany.text = viewModel.company?.name
-        lblDesignation.text = viewModel.company?.bs
+        lblAddress.text = viewModel.address.completeAddress
+        lblCompany.text = viewModel.company.name
+        lblDesignation.text = viewModel.company.bs
         lblWebsite.text = viewModel.website
-        
     }
 }

@@ -10,6 +10,9 @@
 		8C4460B02A00626E009FD8AD /* UsersViewControllerRouterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4460AF2A00626E009FD8AD /* UsersViewControllerRouterTest.swift */; };
 		8C64A48A2A00E8B100B0C812 /* SpiderWebService in Frameworks */ = {isa = PBXBuildFile; productRef = 8C64A4892A00E8B100B0C812 /* SpiderWebService */; };
 		8C64A4902A00F12100B0C812 /* UsersViewControllerInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C64A48F2A00F12100B0C812 /* UsersViewControllerInteractorTest.swift */; };
+		8C64A4952A0108EA00B0C812 /* MockUserCompleteDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C64A4942A0108EA00B0C812 /* MockUserCompleteDetailsViewController.swift */; };
+		8C64A4982A0114CA00B0C812 /* UserCompleteDetailsViewControllerPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C64A4972A0114CA00B0C812 /* UserCompleteDetailsViewControllerPresenterTest.swift */; };
+		8C64A49A2A01151800B0C812 /* MockUserCompleteDetailsViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C64A4992A01151800B0C812 /* MockUserCompleteDetailsViewControllerPresenter.swift */; };
 		8CB7D3AA29FE66DA0015FCA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7D3A929FE66DA0015FCA3 /* AppDelegate.swift */; };
 		8CB7D3AC29FE66DA0015FCA3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7D3AB29FE66DA0015FCA3 /* SceneDelegate.swift */; };
 		8CB7D3B129FE66DA0015FCA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CB7D3AF29FE66DA0015FCA3 /* Main.storyboard */; };
@@ -57,6 +60,9 @@
 /* Begin PBXFileReference section */
 		8C4460AF2A00626E009FD8AD /* UsersViewControllerRouterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewControllerRouterTest.swift; sourceTree = "<group>"; };
 		8C64A48F2A00F12100B0C812 /* UsersViewControllerInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewControllerInteractorTest.swift; sourceTree = "<group>"; };
+		8C64A4942A0108EA00B0C812 /* MockUserCompleteDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserCompleteDetailsViewController.swift; sourceTree = "<group>"; };
+		8C64A4972A0114CA00B0C812 /* UserCompleteDetailsViewControllerPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCompleteDetailsViewControllerPresenterTest.swift; sourceTree = "<group>"; };
+		8C64A4992A01151800B0C812 /* MockUserCompleteDetailsViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserCompleteDetailsViewControllerPresenter.swift; sourceTree = "<group>"; };
 		8CB7D3A629FE66DA0015FCA3 /* Simple Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CB7D3A929FE66DA0015FCA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CB7D3AB29FE66DA0015FCA3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,9 +123,33 @@
 		8C64A48E2A00F10700B0C812 /* UserCompleteDetails */ = {
 			isa = PBXGroup;
 			children = (
+				8C64A4932A0108C900B0C812 /* Mock */,
 				8CB7D40929FF01C20015FCA3 /* UserCompleteDetailsViewControllerTest.swift */,
+				8C64A4972A0114CA00B0C812 /* UserCompleteDetailsViewControllerPresenterTest.swift */,
 			);
 			path = UserCompleteDetails;
+			sourceTree = "<group>";
+		};
+		8C64A4932A0108C900B0C812 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				8C64A4942A0108EA00B0C812 /* MockUserCompleteDetailsViewController.swift */,
+				8C64A4992A01151800B0C812 /* MockUserCompleteDetailsViewControllerPresenter.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		8C64A4962A010B6000B0C812 /* UserList */ = {
+			isa = PBXGroup;
+			children = (
+				8CB7D40B29FF03A40015FCA3 /* Mock */,
+				8C64A48F2A00F12100B0C812 /* UsersViewControllerInteractorTest.swift */,
+				8C4460AF2A00626E009FD8AD /* UsersViewControllerRouterTest.swift */,
+				8CB7D40729FEFF200015FCA3 /* UsersViewControllerTest.swift */,
+				8CB7D40F29FF04430015FCA3 /* UserViewControllerEntityTest.swift */,
+				8CB7D41929FF8B0D0015FCA3 /* UserViewControllerPresenterTest.swift */,
+			);
+			path = UserList;
 			sourceTree = "<group>";
 		};
 		8CB7D39D29FE66DA0015FCA3 = {
@@ -235,13 +265,8 @@
 		8CB7D40C29FF03AC0015FCA3 /* UserModule */ = {
 			isa = PBXGroup;
 			children = (
-				8CB7D40B29FF03A40015FCA3 /* Mock */,
+				8C64A4962A010B6000B0C812 /* UserList */,
 				8C64A48E2A00F10700B0C812 /* UserCompleteDetails */,
-				8C64A48F2A00F12100B0C812 /* UsersViewControllerInteractorTest.swift */,
-				8C4460AF2A00626E009FD8AD /* UsersViewControllerRouterTest.swift */,
-				8CB7D40729FEFF200015FCA3 /* UsersViewControllerTest.swift */,
-				8CB7D40F29FF04430015FCA3 /* UserViewControllerEntityTest.swift */,
-				8CB7D41929FF8B0D0015FCA3 /* UserViewControllerPresenterTest.swift */,
 			);
 			path = UserModule;
 			sourceTree = "<group>";
@@ -385,11 +410,14 @@
 				8CB7D41A29FF8B0D0015FCA3 /* UserViewControllerPresenterTest.swift in Sources */,
 				8CB7D40A29FF01C20015FCA3 /* UserCompleteDetailsViewControllerTest.swift in Sources */,
 				8CB7D41229FF88190015FCA3 /* MockUsersViewController.swift in Sources */,
+				8C64A4952A0108EA00B0C812 /* MockUserCompleteDetailsViewController.swift in Sources */,
 				8C64A4902A00F12100B0C812 /* UsersViewControllerInteractorTest.swift in Sources */,
 				8CB7D41629FF895A0015FCA3 /* MockUsersViewControllerRouter.swift in Sources */,
+				8C64A4982A0114CA00B0C812 /* UserCompleteDetailsViewControllerPresenterTest.swift in Sources */,
 				8C4460B02A00626E009FD8AD /* UsersViewControllerRouterTest.swift in Sources */,
 				8CB7D40829FEFF200015FCA3 /* UsersViewControllerTest.swift in Sources */,
 				8CB7D41429FF888B0015FCA3 /* MockUsersViewPresenter.swift in Sources */,
+				8C64A49A2A01151800B0C812 /* MockUserCompleteDetailsViewControllerPresenter.swift in Sources */,
 				8CB7D40E29FF03C80015FCA3 /* MockUserEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -22,7 +22,6 @@ final class UsersViewControllerRouterTest: XCTestCase {
         sut.view = mockView
         presenter.view = mockView
         presenter.router = sut
-        
     }
     
     override func tearDown() {
@@ -38,5 +37,4 @@ final class UsersViewControllerRouterTest: XCTestCase {
         
         XCTAssertEqual(presenter.didSelectWasCalled, true)
     }
-    
 }

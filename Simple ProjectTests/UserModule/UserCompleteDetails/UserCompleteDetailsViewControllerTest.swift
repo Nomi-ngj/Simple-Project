@@ -11,11 +11,14 @@ import XCTest
 final class UserCompleteDetailsViewControllerTest: XCTestCase {
     
     var sut:UserCompleteDetailsViewController!
-
+    var presenter:MockUserCompleteDetailsViewControllerPresenter?
     override func setUp() {
         super.setUp()
         
         self.sut = UserCompleteDetailsViewControllerRouter.make(user: MockUserEntity.mockUser) as? UserCompleteDetailsViewController
+        presenter = MockUserCompleteDetailsViewControllerPresenter(user: MockUserEntity.mockUser)
+        sut.presenter = presenter
+        presenter?.view = sut
         self.sut.loadView()
         self.sut.viewDidLoad()
     }
@@ -86,4 +89,3 @@ final class UserCompleteDetailsViewControllerTest: XCTestCase {
         XCTAssertNotNil(sut.tableView.dataSource)
     }
 }
-

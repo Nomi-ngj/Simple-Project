@@ -9,7 +9,7 @@ import Foundation
 @testable import Simple_Project
 
 class MockUsersViewControllerPresenter:UsersViewControllerPresenting{
-    var view: UsersViewControllerDisplaying?
+    weak var view: UsersViewControllerDisplaying?
     var router: UsersViewControllerRouting?
     var interactor: UsersViewControllerInteracting?
     var users: [UserViewControllerEntity]?
@@ -31,6 +31,7 @@ class MockUsersViewControllerPresenter:UsersViewControllerPresenting{
             fetchUsersFailedWasCalled = true
         }
     }
+    
     var didSelectWasCalled = false
     func didSelect(at indexPath: IndexPath) {
         if let user = self.users?.first{

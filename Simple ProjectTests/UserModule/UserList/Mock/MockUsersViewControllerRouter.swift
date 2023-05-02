@@ -22,5 +22,4 @@ class MockUsersViewControllerRouter:UsersViewControllerRouting{
         showUserCompleteDetailScreenWasCalled = true
     }
     
-    
 }

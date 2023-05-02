@@ -22,6 +22,7 @@ class UserCompleteDetailsViewControllerPresenter: UserCompleteDetailsViewControl
     deinit{
         debugPrint("UserCompleteDetailsViewControllerPresenter init")
     }
+    
     func viewDidLoad() {
         self.view?.setupUI()
         self.view?.reloadData()

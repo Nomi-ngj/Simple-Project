@@ -13,7 +13,6 @@ final class UsersViewControllerInteractorTest: XCTestCase {
     var sut: UsersViewControllerInteractor!
     var presenter: MockUsersViewControllerPresenter!
     
-    
     override func setUp() {
         super.setUp()
         
@@ -21,7 +20,6 @@ final class UsersViewControllerInteractorTest: XCTestCase {
         sut = UsersViewControllerInteractor()
         
         presenter.interactor = sut
-        
     }
     
     override func tearDown() {
@@ -29,9 +27,8 @@ final class UsersViewControllerInteractorTest: XCTestCase {
         presenter = nil
         super.tearDown()
     }
-
+    
     func testRequestFailure(){
-        
         Task {
             do {
                 var request = UsersRequest()
@@ -40,24 +37,21 @@ final class UsersViewControllerInteractorTest: XCTestCase {
                 let result = try await sut.fetchUsersRequest()
                 XCTFail("Expected error but got result: \(result)")
             } catch {
-                // Expected error occurred, test passed
                 XCTAssertNotNil(error)
             }
         }
     }
     
     func testRequestSuccess(){
-        DispatchQueue.main.async {
-            Task(priority: .userInitiated) {
-                do {
-                    let result = try await self.sut.fetchUsersRequest()
-                    XCTAssertGreaterThan(result.count, 0)
-                } catch {
-                    // Expected error occurred, test passed
-                    XCTFail("Expected result but got error: \(error)")
-                }
+        Task {
+            do {
+                self.sut = UsersViewControllerInteractor()
+                let result = try await self.sut.fetchUsersRequest()
+                XCTAssertGreaterThan(result.count, 0)
+            } catch {
+                // Expected error occurred, test passed
+                XCTFail("Expected result but got error: \(error)")
             }
         }
-       
     }
 }

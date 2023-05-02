@@ -18,7 +18,6 @@ final class UsersViewControllerTest: XCTestCase {
         
         self.sut = UsersViewControllerRouter.make() as? UsersViewController
         presenter = MockUsersViewControllerPresenter()
-
         sut.presenter = presenter
         self.sut.loadView()
         self.sut.viewDidLoad()
@@ -57,7 +56,6 @@ final class UsersViewControllerTest: XCTestCase {
     }
     
     func testRegisterUserTableViewCell() {
-
         sut.setupUI()
         let cell = sut.tableView.dequeueReusableCell(withIdentifier: "UserTableViewCell") as? UserTableViewCell
         XCTAssertNotNil(cell)
@@ -92,7 +90,6 @@ final class UsersViewControllerTest: XCTestCase {
         
         XCTAssertTrue(presenter!.viewDidLoadWasCalled)
     }
-
     
     func testViewDidLoadSuccessFetchUsers(){
         presenter?.users = [MockUserEntity.mockUser]
@@ -105,5 +102,24 @@ final class UsersViewControllerTest: XCTestCase {
         sut.viewDidLoad()
         
         XCTAssertTrue(presenter!.fetchUsersFailedWasCalled)
+    }
+    
+    func testTableViewDidSelectRow() {
+        
+        sut.tableView.delegate = sut
+        
+        let indexPath = IndexPath(row: 0, section: 0)
+        sut.tableView(sut.tableView, didSelectRowAt: indexPath)
+        
+        XCTAssertTrue(presenter!.didSelectWasCalled)
+    }
+    
+    func testTableViewCellForRowAt() {
+        
+        let tableView = UITableView()
+        tableView.register(UserTableViewCell.self, forCellReuseIdentifier: "UserTableViewCell")
+        
+        let cellAtIndex0: UITableViewCell = sut.tableView(tableView, cellForRowAt: .init(row: 0, section: 0))
+        XCTAssertTrue(cellAtIndex0 is UserTableViewCell)
     }
 }

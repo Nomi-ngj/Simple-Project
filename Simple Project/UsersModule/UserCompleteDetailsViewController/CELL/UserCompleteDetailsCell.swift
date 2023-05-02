@@ -16,7 +16,9 @@ class UserCompleteDetailsCell: UITableViewCell {
     @IBOutlet weak var lblCompany:UILabel!
     @IBOutlet weak var lblDesignation:UILabel!
     @IBOutlet weak var lblWebsite:UILabel!
-
+    
+    var viewModel:UserViewControllerEntity?
+    
     func config(viewModel:UserViewControllerEntity){
         lblUserName.text = viewModel.username
         lblFullName.text = viewModel.name

@@ -13,6 +13,11 @@ class MockUsersViewController:UIViewController, UsersViewControllerDisplaying {
     
     var tableView: UITableView!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        presenter.viewDidLoad()
+    }
+    
     var setupUIWasCalled = false
     func setupUI() {
         setupUIWasCalled = true

@@ -35,13 +35,12 @@ final class UserViewControllerPresenterTest: XCTestCase {
         super.tearDown()
     }
     
-    // MARK: - Tests for protocol functions
     func testViewDidLoad() {
         sut.viewDidLoad()
         XCTAssertTrue(mockView.setupUIWasCalled)
     }
     
-    func testSuccessFetchingUsers() async {
+    func testSuccessFetchingUsers() {
         DispatchQueue.main.async {
             Task{
                 self.mockInteractor.user = MockUserEntity.mockUser

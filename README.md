@@ -1,5 +1,7 @@
 # Simple-Project 
 <a href="https://codeclimate.com/github/Nomi-ngj/Simple-Project/maintainability"><img src="https://api.codeclimate.com/v1/badges/d169b29112962f0c7039/maintainability" /></a>
+<a href="https://codeclimate.com/github/Nomi-ngj/Simple-Project/test_coverage"><img src="https://api.codeclimate.com/v1/badges/d169b29112962f0c7039/test_coverage" /></a>
+
 VIPER is a design pattern used for developing iOS applications with modular, scalable, and testable architecture. In this article, I will explain how VIPER works and its benefits for creating clean and organized project structures.
 
 Additionally, I will demonstrate how to retrieve user data from the API endpoint https://jsonplaceholder.typicode.com/users and display it in the app by parsing the JSON data and mapping it to our app's model objects. For networking, we will use a GET API from https://github.com/Nomi-ngj/SpiderWebService, created recently.

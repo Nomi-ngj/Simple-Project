@@ -10,6 +10,8 @@ import Foundation
 import SpiderWebService
 
 class MockUsersViewControllerInteractor:UsersViewControllerInteracting{
+    var requestFetchUser: UsersRequest = .init(url: "https://jsonplaceholder.typicode.com/users")
+    
     
     var user:UserViewControllerEntity?
     

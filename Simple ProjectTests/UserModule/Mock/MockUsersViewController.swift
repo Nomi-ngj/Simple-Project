@@ -8,7 +8,7 @@
 import UIKit
 @testable import Simple_Project
 
-class MockUsersViewController: UsersViewControllerDisplaying {
+class MockUsersViewController:UIViewController, UsersViewControllerDisplaying {
     var presenter: UsersViewControllerPresenting!
     
     var tableView: UITableView!

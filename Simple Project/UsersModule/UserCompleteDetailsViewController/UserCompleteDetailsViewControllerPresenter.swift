@@ -16,7 +16,7 @@ class UserCompleteDetailsViewControllerPresenter: UserCompleteDetailsViewControl
     init(_ view: UserCompleteDetailsViewControllerDisplaying,_ user: UserViewControllerEntity) {
         self.view = view
         self.user = user
-        self.title = user.name ?? ""
+        self.title = user.name
     }
     
     deinit{

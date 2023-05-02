@@ -11,7 +11,7 @@ import SpiderWebService
 
 final class UserViewControllerPresenterTest: XCTestCase {
     
-    var presenter: UsersViewControllerPresenting!
+    var sut: UsersViewControllerPresenting!
     var mockView: MockUsersViewController!
     var mockRouter: MockUsersViewControllerRouter!
     var mockInteractor: MockUsersViewControllerInteractor!
@@ -21,14 +21,14 @@ final class UserViewControllerPresenterTest: XCTestCase {
         mockView = MockUsersViewController()
         mockRouter = MockUsersViewControllerRouter()
         mockInteractor = MockUsersViewControllerInteractor()
-        presenter = UsersViewControllerPresenter()
-        presenter.view = mockView
-        presenter.router = mockRouter
-        presenter.interactor = mockInteractor
+        sut = UsersViewControllerPresenter()
+        sut.view = mockView
+        sut.router = mockRouter
+        sut.interactor = mockInteractor
     }
     
     override func tearDown() {
-        presenter = nil
+        sut = nil
         mockView = nil
         mockRouter = nil
         mockInteractor = nil
@@ -37,29 +37,23 @@ final class UserViewControllerPresenterTest: XCTestCase {
     
     // MARK: - Tests for protocol functions
     func testViewDidLoad() {
-        presenter.viewDidLoad()
+        sut.viewDidLoad()
         XCTAssertTrue(mockView.setupUIWasCalled)
     }
     
-    func testSuccessFetchingUsers() {
-        
-        let expectation = XCTestExpectation(description: "SuccessFetchingUsers")
-
-        DispatchQueue.global(qos: .userInitiated).async {
-            self.mockInteractor.user = MockUserEntity.mockUser
-            self.presenter.fetchUsers()
-            expectation.fulfill()
+    func testSuccessFetchingUsers() async {
+        DispatchQueue.main.async {
+            Task{
+                self.mockInteractor.user = MockUserEntity.mockUser
+                self.sut.fetchUsers()
+                XCTAssertTrue(self.mockInteractor.fetchUsersRequestSuccessWasCalled)
+            }
         }
-            
-        // Wait for the expectation to be fulfilled, or time out after 2 seconds
-        wait(for: [expectation], timeout: 2)
-
-        XCTAssertTrue(mockInteractor.fetchUsersRequestSuccessWasCalled)
     }
     
     func testFailedToFetchUsers() {
         mockInteractor.user = nil
-        presenter.fetchUsers()
+        sut.fetchUsers()
         
         XCTAssertFalse(mockInteractor.fetchUsersRequestFailedWasCalled)
     }
@@ -67,8 +61,8 @@ final class UserViewControllerPresenterTest: XCTestCase {
     func testDidSelect() {
         let indexPath = IndexPath(row: 0, section: 0)
         let user = MockUserEntity.mockUser
-        presenter.users = [user]
-        presenter.didSelect(at: indexPath)
+        sut.users = [user]
+        sut.didSelect(at: indexPath)
         XCTAssertTrue(mockRouter.showUserCompleteDetailScreenWasCalled)
     }
 }

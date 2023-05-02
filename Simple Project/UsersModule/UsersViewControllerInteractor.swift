@@ -6,10 +6,17 @@
 //
 
 import Foundation
+import SpiderWebService
 
 class UsersViewControllerInteractor:UsersViewControllerInteracting{
+    var requestFetchUser: UsersRequest
+    
+    init(requestFetchUser: UsersRequest = UsersRequest()) {
+        self.requestFetchUser = requestFetchUser
+    }
+    
     func fetchUsersRequest() async throws -> [UserViewControllerEntity] {
-        let request = await UsersRequest().send()
+        let request = await requestFetchUser.send()
         switch request {
         case .success(let success):
             return success

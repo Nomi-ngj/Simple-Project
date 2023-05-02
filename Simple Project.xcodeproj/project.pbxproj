@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C4460B02A00626E009FD8AD /* UsersViewControllerRouterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4460AF2A00626E009FD8AD /* UsersViewControllerRouterTest.swift */; };
+		8C64A48A2A00E8B100B0C812 /* SpiderWebService in Frameworks */ = {isa = PBXBuildFile; productRef = 8C64A4892A00E8B100B0C812 /* SpiderWebService */; };
+		8C64A4902A00F12100B0C812 /* UsersViewControllerInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C64A48F2A00F12100B0C812 /* UsersViewControllerInteractorTest.swift */; };
 		8CB7D3AA29FE66DA0015FCA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7D3A929FE66DA0015FCA3 /* AppDelegate.swift */; };
 		8CB7D3AC29FE66DA0015FCA3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7D3AB29FE66DA0015FCA3 /* SceneDelegate.swift */; };
 		8CB7D3B129FE66DA0015FCA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CB7D3AF29FE66DA0015FCA3 /* Main.storyboard */; };
@@ -19,7 +22,6 @@
 		8CB7D3E429FEDAC70015FCA3 /* UsersViewControllerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7D3E329FEDAC70015FCA3 /* UsersViewControllerRouter.swift */; };
 		8CB7D3E629FEDAD00015FCA3 /* UsersViewControllerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7D3E529FEDAD00015FCA3 /* UsersViewControllerInteractor.swift */; };
 		8CB7D3E829FEE13B0015FCA3 /* UserViewControllerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7D3E729FEE13B0015FCA3 /* UserViewControllerEntity.swift */; };
-		8CB7D3EB29FEE2630015FCA3 /* SpiderWebService in Frameworks */ = {isa = PBXBuildFile; productRef = 8CB7D3EA29FEE2630015FCA3 /* SpiderWebService */; };
 		8CB7D3EE29FEE2A00015FCA3 /* NetworkConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7D3ED29FEE2A00015FCA3 /* NetworkConstant.swift */; };
 		8CB7D3F029FEE2AF0015FCA3 /* UsersRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7D3EF29FEE2AF0015FCA3 /* UsersRequest.swift */; };
 		8CB7D3F429FEEB970015FCA3 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7D3F229FEEB970015FCA3 /* UserTableViewCell.swift */; };
@@ -53,6 +55,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8C4460AF2A00626E009FD8AD /* UsersViewControllerRouterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewControllerRouterTest.swift; sourceTree = "<group>"; };
+		8C64A48F2A00F12100B0C812 /* UsersViewControllerInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewControllerInteractorTest.swift; sourceTree = "<group>"; };
 		8CB7D3A629FE66DA0015FCA3 /* Simple Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CB7D3A929FE66DA0015FCA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CB7D3AB29FE66DA0015FCA3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,7 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CB7D3EB29FEE2630015FCA3 /* SpiderWebService in Frameworks */,
+				8C64A48A2A00E8B100B0C812 /* SpiderWebService in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +114,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C64A48E2A00F10700B0C812 /* UserCompleteDetails */ = {
+			isa = PBXGroup;
+			children = (
+				8CB7D40929FF01C20015FCA3 /* UserCompleteDetailsViewControllerTest.swift */,
+			);
+			path = UserCompleteDetails;
+			sourceTree = "<group>";
+		};
 		8CB7D39D29FE66DA0015FCA3 = {
 			isa = PBXGroup;
 			children = (
@@ -224,8 +236,10 @@
 			isa = PBXGroup;
 			children = (
 				8CB7D40B29FF03A40015FCA3 /* Mock */,
+				8C64A48E2A00F10700B0C812 /* UserCompleteDetails */,
+				8C64A48F2A00F12100B0C812 /* UsersViewControllerInteractorTest.swift */,
+				8C4460AF2A00626E009FD8AD /* UsersViewControllerRouterTest.swift */,
 				8CB7D40729FEFF200015FCA3 /* UsersViewControllerTest.swift */,
-				8CB7D40929FF01C20015FCA3 /* UserCompleteDetailsViewControllerTest.swift */,
 				8CB7D40F29FF04430015FCA3 /* UserViewControllerEntityTest.swift */,
 				8CB7D41929FF8B0D0015FCA3 /* UserViewControllerPresenterTest.swift */,
 			);
@@ -249,7 +263,7 @@
 			);
 			name = "Simple Project";
 			packageProductDependencies = (
-				8CB7D3EA29FEE2630015FCA3 /* SpiderWebService */,
+				8C64A4892A00E8B100B0C812 /* SpiderWebService */,
 			);
 			productName = "Simple Project";
 			productReference = 8CB7D3A629FE66DA0015FCA3 /* Simple Project.app */;
@@ -302,7 +316,7 @@
 			);
 			mainGroup = 8CB7D39D29FE66DA0015FCA3;
 			packageReferences = (
-				8CB7D3E929FEE2630015FCA3 /* XCRemoteSwiftPackageReference "SpiderWebService" */,
+				8C64A4882A00E8B100B0C812 /* XCRemoteSwiftPackageReference "SpiderWebService" */,
 			);
 			productRefGroup = 8CB7D3A729FE66DA0015FCA3 /* Products */;
 			projectDirPath = "";
@@ -371,7 +385,9 @@
 				8CB7D41A29FF8B0D0015FCA3 /* UserViewControllerPresenterTest.swift in Sources */,
 				8CB7D40A29FF01C20015FCA3 /* UserCompleteDetailsViewControllerTest.swift in Sources */,
 				8CB7D41229FF88190015FCA3 /* MockUsersViewController.swift in Sources */,
+				8C64A4902A00F12100B0C812 /* UsersViewControllerInteractorTest.swift in Sources */,
 				8CB7D41629FF895A0015FCA3 /* MockUsersViewControllerRouter.swift in Sources */,
+				8C4460B02A00626E009FD8AD /* UsersViewControllerRouterTest.swift in Sources */,
 				8CB7D40829FEFF200015FCA3 /* UsersViewControllerTest.swift in Sources */,
 				8CB7D41429FF888B0015FCA3 /* MockUsersViewPresenter.swift in Sources */,
 				8CB7D40E29FF03C80015FCA3 /* MockUserEntity.swift in Sources */,
@@ -651,7 +667,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		8CB7D3E929FEE2630015FCA3 /* XCRemoteSwiftPackageReference "SpiderWebService" */ = {
+		8C64A4882A00E8B100B0C812 /* XCRemoteSwiftPackageReference "SpiderWebService" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Nomi-ngj/SpiderWebService.git";
 			requirement = {
@@ -662,9 +678,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		8CB7D3EA29FEE2630015FCA3 /* SpiderWebService */ = {
+		8C64A4892A00E8B100B0C812 /* SpiderWebService */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 8CB7D3E929FEE2630015FCA3 /* XCRemoteSwiftPackageReference "SpiderWebService" */;
+			package = 8C64A4882A00E8B100B0C812 /* XCRemoteSwiftPackageReference "SpiderWebService" */;
 			productName = SpiderWebService;
 		};
 /* End XCSwiftPackageProductDependency section */

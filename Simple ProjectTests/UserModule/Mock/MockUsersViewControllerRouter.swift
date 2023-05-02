@@ -10,12 +10,9 @@ import Foundation
 import UIKit
 
 class MockUsersViewControllerRouter:UsersViewControllerRouting{
-    var view: UsersViewControllerDisplaying?
-    
-//    var makeWasCalled = false
+    var view: UIViewController?
     
     static func make() -> UIViewController? {
-//        makeWasCalled = true
         
         return UsersViewControllerRouter.make()
     }

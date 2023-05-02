@@ -11,21 +11,14 @@ import XCTest
 final class UsersViewControllerTest: XCTestCase {
     
     var sut:UsersViewController!
-    var router: MockUsersViewControllerRouter?
-    var interactor: MockUsersViewControllerInteractor?
     var presenter: MockUsersViewControllerPresenter?
     
     override func setUp() {
         super.setUp()
         
         self.sut = UsersViewControllerRouter.make() as? UsersViewController
-        router = MockUsersViewControllerRouter()
-        interactor = MockUsersViewControllerInteractor()
         presenter = MockUsersViewControllerPresenter()
-        
-        presenter?.interactor = interactor
-        presenter?.router = router
-        
+
         sut.presenter = presenter
         self.sut.loadView()
         self.sut.viewDidLoad()
@@ -71,8 +64,8 @@ final class UsersViewControllerTest: XCTestCase {
     }
     
     func testRegisterUserTableViewCellConfig() {
-        sut.setupUI()
         
+        sut.setupUI()
         let cell = sut.tableView.dequeueReusableCell(withIdentifier: "UserTableViewCell") as! UserTableViewCell
         let user = MockUserEntity.mockUser
         

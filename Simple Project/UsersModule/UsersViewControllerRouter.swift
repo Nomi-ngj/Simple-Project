@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 class UsersViewControllerRouter:UsersViewControllerRouting{
-    var view: UsersViewControllerDisplaying?
+    weak var view: UIViewController?
     
     static func make() -> UIViewController? {
         let viewController = UsersViewController(nibName: "UsersViewController", bundle: .main)
@@ -26,9 +26,8 @@ class UsersViewControllerRouter:UsersViewControllerRouting{
     }
     
     func showUserCompleteDetailScreen(userInfo: UserViewControllerEntity) {
-        guard let navigationController = (view as? UIViewController)?.navigationController,
-        let viewController = UserCompleteDetailsViewControllerRouter.make(user: userInfo) else {return}
+        guard let viewController = UserCompleteDetailsViewControllerRouter.make(user: userInfo) else {return}
         
-        navigationController.pushViewController(viewController, animated: true)
+        view?.navigationController?.pushViewController(viewController, animated: true)
     }
 }

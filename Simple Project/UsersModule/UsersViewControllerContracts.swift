@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import SpiderWebService
 
 protocol UsersViewControllerDisplaying: AnyObject{
     var presenter: UsersViewControllerPresenting! {get set}
@@ -27,11 +28,12 @@ protocol UsersViewControllerPresenting:AnyObject{
 }
 
 protocol UsersViewControllerInteracting:AnyObject{
+    var requestFetchUser:UsersRequest {get set}
     func fetchUsersRequest() async throws -> [UserViewControllerEntity]
 }
 
 protocol UsersViewControllerRouting:AnyObject{
-    var view:UsersViewControllerDisplaying? {get}
+    var view:UIViewController? {get set}
     static func make() -> UIViewController?
     func showUserCompleteDetailScreen(userInfo:UserViewControllerEntity)
 }

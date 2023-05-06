@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 env:
-  PROJECT_NAME: ApiClient
+  PROJECT_NAME: Simple-Project
 
 jobs:
   cancel-previous-runs:

@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "spiderwebservice",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Nomi-ngj/SpiderWebService.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "bd95fdfcac428c4fa0e2db5542dbeace10dd375e"
+      }
+    }
+  ],
+  "version" : 2
+}

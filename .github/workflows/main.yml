@@ -1,0 +1,137 @@
+name: Main
+
+on:
+  push:
+    branches: [main]
+
+  workflow_dispatch:
+
+env:
+  PROJECT_NAME: ApiClient
+
+jobs:
+
+  # [TODO: fix them you fool]
+  # linters:
+  #   runs-on: [self-hosted, macOS, arm64, MacStadium]
+  #
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #
+  #     - name: Run Swift-Format
+  #       run: "! swift-format lint --recursive Sources/$PROJECT_NAME Tests/$PROJECT_NAMETests lint.swift 2>&1 | grep -q warning"
+
+  tests:
+    runs-on: [self-hosted, macOS, arm64, MacStadium]
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Resolve Package Dependencies
+        run: arch -arm64 xcodebuild -resolvePackageDependencies
+
+      - name: Build & Run Tests
+        run: |
+          set -eo pipefail
+          arch -arm64 xcodebuild test -scheme $PROJECT_NAME -destination 'platform=iOS Simulator,name=iPhone 12,OS=latest' -enableCodeCoverage YES
+
+  code-coverage-report:
+      runs-on: [self-hosted, macOS, arm64, MacStadium]
+      needs: [tests]
+
+      strategy:
+        matrix:
+          device:
+            - iPhone 12
+
+      steps:
+        - uses: actions/checkout@v2
+
+        - name: Resolve Package Dependencies
+          run: arch -arm64 xcodebuild -resolvePackageDependencies
+
+        - name: Build & Run Tests
+          run: arch -arm64 xcodebuild test -scheme ${{ env.PROJECT_NAME }} -destination 'platform=iOS Simulator,name=iPhone 12,OS=latest' -enableCodeCoverage YES -derivedDataPath .build
+
+        - uses: michaelhenry/swifty-code-coverage@v1.0.0
+          with:
+            build-path: .build
+            target: ${{ env.PROJECT_NAME }}Tests.xctest
+            is-spm: true
+            output: "coverage/lcov.info"
+            output-artifact-name: "codeclimate-artifact"
+
+        - name: Publish to code climate
+          uses: paambaati/codeclimate-action@v3.0.0
+          env:
+            CC_TEST_REPORTER_ID: ${{ secrets.IOS_API_KEY }}
+          with:
+            coverageLocations: |
+              coverage/lcov.info:lcov
+
+#[TODO: fix them when releasing the app]
+#  notify-slack-success:
+#    runs-on: ubuntu-latest
+#    needs: [linters, tests]
+#    if: success()
+#
+#    steps:
+#      - name: Report Success to Slack
+#        uses: voxmedia/github-action-slack-notify-build@v1
+#        with:
+#          channel: ci-ios
+#          status: SUCCESS
+#          color: good
+#        env:
+#          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+#
+#  notify-slack-fail-early:
+#    runs-on: ubuntu-latest
+#    needs: [linters]
+#    if: failure()
+#
+#    steps:
+#      - name: Report Failure to Slack
+#        uses: voxmedia/github-action-slack-notify-build@v1
+#        with:
+#          channel: ci-ios
+#          status: FAILURE
+#          color: danger
+#        env:
+#          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+#
+#      - name: Report Failure to Team-iOS channel on Slack
+#        uses: voxmedia/github-action-slack-notify-build@v1
+#        with:
+#          channel: team-ios
+#          status: FAILURE
+#          color: danger
+#        env:
+#          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+#
+#      - name: Cancel current workflow
+#        uses: andymckay/cancel-action@0.2
+#
+#  notify-slack-failure:
+#    runs-on: ubuntu-latest
+#    needs: [linters, tests]
+#    if: failure()
+#
+#    steps:
+#      - name: Report Failure to Slack
+#        uses: voxmedia/github-action-slack-notify-build@v1
+#        with:
+#          channel: ci-ios
+#          status: FAILURE
+#          color: danger
+#        env:
+#          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+#
+#      - name: Report Failure to Team-iOS channel on Slack
+#        uses: voxmedia/github-action-slack-notify-build@v1
+#        with:
+#          channel: team-ios
+#          status: FAILURE
+#          color: danger
+#        env:
+#          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}

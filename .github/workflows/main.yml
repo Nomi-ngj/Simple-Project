@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 env:
-  PROJECT_NAME: ApiClient
+  PROJECT_NAME: Simple-Project
 
 jobs:
 
@@ -64,7 +64,7 @@ jobs:
         - name: Publish to code climate
           uses: paambaati/codeclimate-action@v3.0.0
           env:
-            CC_TEST_REPORTER_ID: ${{ secrets.IOS_API_KEY }}
+            CC_TEST_REPORTER_ID: 376a09c3549b66a4c20bcf52849265958a02a86bbbc6a0919fc144ba78beab0e
           with:
             coverageLocations: |
               coverage/lcov.info:lcov
